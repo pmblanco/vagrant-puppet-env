@@ -73,6 +73,9 @@ Pedro Miguel Blanco
    
 ## Changelog
 
+### v.0.4. 30/04/2014
+Con algunas versiones de centos hay problemas con la versión de puppet que ejecuta los manifiestos. Para evitar problemas con versiones antiguas ejecutamos una actualización del paquete puppet antes de hacer la provisión de puppet.
+
 ### v.0.3. 02/04/2014
 Compatibilidad con Centos 6
 Varios ficheros de configuración Vagrantfile para poder elegir antes del arranque de las máquinas

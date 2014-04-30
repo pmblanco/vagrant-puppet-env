@@ -114,12 +114,13 @@ Vagrant.configure("2") do |config|
   config.vm.define :puppet1 do |puppet1|
     puppet1.vm.hostname = "puppet1.vag.ardemans.int"
     puppet1.vm.network :private_network, ip: "192.168.5.15"
+	puppet1.vm.provision "shell", inline: "/usr/bin/yum -y install puppet"
 	puppet1.vm.provision :puppet do |puppet|
 	  puppet.manifests_path = "puppet/manifests"
 	  puppet.manifest_file = "site.pp"
 	  puppet.module_path = "puppet/modules"
 	  puppet.hiera_config_path = "hiera.yaml"
-	 puppet.options = "--verbose --debug"
+	  puppet.options = "--verbose --debug"
     end
   end
 
