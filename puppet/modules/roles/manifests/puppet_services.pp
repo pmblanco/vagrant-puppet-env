@@ -72,4 +72,7 @@ class roles::puppet_services {
 	],
   }
   
+  class { 'rabbitmq':
+  }
+  
 }
