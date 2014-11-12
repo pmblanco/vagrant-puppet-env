@@ -28,3 +28,6 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 [submodule "puppet/modules/mcollective"]
 	path = puppet/modules/mcollective
 	url = https://github.com/puppetlabs/puppetlabs-mcollective.git
+[submodule "puppet/modules/staging"]
+	path = puppet/modules/staging
+	url = https://github.com/nanliu/puppet-staging.git
