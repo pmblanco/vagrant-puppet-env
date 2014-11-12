@@ -6,6 +6,18 @@ class roles::puppet_services {
   
   class { 'apache':
     default_vhost   => false,
+	mpm_module      => false,
+  }
+  
+  class { 'apache::mod::worker':
+    startservers        => '2',
+    maxclients          => '10',
+    minsparethreads     => '3',
+    maxsparethreads     => '3',
+    threadsperchild     => '10',
+    maxrequestsperchild => '100',  
+    serverlimit         => '10',	
+    threadlimit         => '20',	
   }
   
   case $::operatingsystem {
