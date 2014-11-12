@@ -1,7 +1,13 @@
 node 'puppet1.vag.ardemans.int' {
 
   class { 'roles::common':
-    stage          => 'pre',
+    install_mcollective   => false,
+  }
+
+  class { 'mcollective':
+    middleware_hosts      => [ '192.168.5.16' ],
+    connector             => 'rabbitmq',
+	client                => true,
   }
   
   class { 'roles::puppet_master':
@@ -11,8 +17,8 @@ node 'puppet1.vag.ardemans.int' {
 
 node 'dashboard1.vag.ardemans.int' {
 
+
   class { 'roles::common':
-    stage          => 'pre',
   }
 
   class { 'puppet::agent':
@@ -25,5 +31,6 @@ node 'dashboard1.vag.ardemans.int' {
   
   class { 'roles::puppet_services':
   }
+  
   
 }
