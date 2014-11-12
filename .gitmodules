@@ -22,3 +22,15 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 [submodule "puppet/modules/firewall"]
 	path = puppet/modules/firewall
 	url = https://github.com/puppetlabs/puppetlabs-firewall.git
+[submodule "puppet/modules/rabbitmq"]
+	path = puppet/modules/rabbitmq
+	url = https://github.com/puppetlabs/puppetlabs-rabbitmq.git
+[submodule "puppet/modules/mcollective"]
+	path = puppet/modules/mcollective
+	url = https://github.com/puppetlabs/puppetlabs-mcollective.git
+[submodule "puppet/modules/staging"]
+	path = puppet/modules/staging
+	url = https://github.com/nanliu/puppet-staging.git
+[submodule "puppet/modules/datacat"]
+	path = puppet/modules/datacat
+	url = https://github.com/richardc/puppet-datacat.git

@@ -1,11 +1,20 @@
 class roles::puppet_services {
 
-  package { 'python-pip':
-    ensure         => installed,
-  }
-  
+ 
   class { 'apache':
     default_vhost   => false,
+	mpm_module      => false,
+  }
+  
+  class { 'apache::mod::worker':
+    startservers        => '2',
+    maxclients          => '10',
+    minsparethreads     => '3',
+    maxsparethreads     => '3',
+    threadsperchild     => '10',
+    maxrequestsperchild => '100',  
+    serverlimit         => '10',	
+    threadlimit         => '20',	
   }
   
   case $::operatingsystem {
@@ -55,9 +64,43 @@ class roles::puppet_services {
     puppetdb_host  => 'puppet1.vag.ardemans.int',
 	puppetdb_port  => '8080',
 	require        => [
-	  Package['python-pip'],
 	  Apache::Vhost['puppetboard']
 	],
+  }
+  
+  class { 'rabbitmq':
+    stomp_ensure   => true,
+    config_stomp   => true,
+	stomp_port     => '61613',
+  }
+  
+  rabbitmq_user { 'mcollective':
+    password       => 'marionette',
+    admin          => true,
+  }
+  
+  rabbitmq_vhost { '/mcollective':
+    ensure         => present
+  }
+  
+  rabbitmq_user_permissions { 'mcollective@/mcollective':
+    configure_permission  => '.*',
+	read_permission       => '.*',
+	write_permission      => '.*',
+  }
+  
+  rabbitmq_exchange { 'mcollective_broadcast@/mcollective':
+    ensure                => present,
+	user                  => 'mcollective',
+	password              => 'marionette',
+	type                  => 'topic',
+  }
+
+  rabbitmq_exchange { 'mcollective_directed@/mcollective':
+    ensure                => present,
+	user                  => 'mcollective',
+	password              => 'marionette',
+	type                  => 'direct',
   }
   
 }

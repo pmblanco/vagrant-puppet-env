@@ -1,4 +1,6 @@
-class roles::common {
+class roles::common (
+  $install_mcollective   = true
+){
 
   case $::operatingsystem {
 
@@ -15,6 +17,13 @@ class roles::common {
   }
 
   class { 'puppet::repo':
+  }
+  
+  if $install_mcollective {
+    class { 'mcollective':
+      middleware_hosts      => [ '192.168.5.16' ],
+	  connector             => 'rabbitmq',
+    }
   }
   
 }
