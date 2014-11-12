@@ -73,6 +73,11 @@ Pedro Miguel Blanco
    
 ## Changelog
 
+### v.0.5. 12/11/2014
+Introducimos el servicio mcollective, para lo cual hacemos uso del modulo de puppetlabs rabbitmq, para instalar el gestor de colas en el servidor de dashboard, y tambien del módulo de mcollective, también de puppetlabs, para instalar el agente en todos los servidores, y el cliente en el de puppetlabs
+
+Para intentar mejorar el rendimiento y hacer sitio en el servidor de dashboard se ha cambiado la configuración de apache para que funcione en modo worker, para ello hemos tenido que actualizar el módulo de apache de puppetlabs.
+
 ### v.0.4. 30/04/2014
 Con algunas versiones de centos hay problemas con la versión de puppet que ejecuta los manifiestos. Para evitar problemas con versiones antiguas ejecutamos una actualización del paquete puppet antes de hacer la provisión de puppet.
 
