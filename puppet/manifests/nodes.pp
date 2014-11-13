@@ -19,7 +19,7 @@ node 'dashboard1.vag.ardemans.int' {
 
 
   class { 'roles::common':
-  }
+  }->
 
   class { 'puppet::agent':
     report         => 'true',
@@ -27,7 +27,7 @@ node 'dashboard1.vag.ardemans.int' {
 	service_status => 'stopped',
 	rundir         => '/var/run/puppet',
 	ssldir         => '/var/lib/puppet/ssl',
-  }
+  }->
   
   class { 'roles::puppet_services':
   }
