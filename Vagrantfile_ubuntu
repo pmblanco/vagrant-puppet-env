@@ -48,6 +48,11 @@ Vagrant.configure("2") do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
 
+  config.vm.provider :virtualbox do |vb|
+	vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+  end
+  
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
   # You will need to create the manifests directory and a manifest in
@@ -113,9 +118,8 @@ Vagrant.configure("2") do |config|
   config.vm.define :puppet1 do |puppet1|
     puppet1.vm.hostname = "puppet1.vag.ardemans.int"
     puppet1.vm.network :private_network, ip: "192.168.5.15"
-	puppet1.vm.provision :shell do |shell|
-	  shell.inline = "/usr/bin/apt-get update"
-	end
+	puppet1.vm.provision "shell", inline: "cd /tmp; wget https://apt.puppetlabs.com/puppetlabs-release-precise.deb; dpkg -i puppetlabs-release-precise.deb; apt-get update"
+    puppet1.vm.provision "shell", inline: "/usr/bin/apt-get -y install puppet"
 	puppet1.vm.provision :puppet do |puppet|
 	  puppet.manifests_path = "puppet/manifests"
 	  puppet.manifest_file = "site.pp"
@@ -129,6 +133,8 @@ Vagrant.configure("2") do |config|
   config.vm.define :dashboard1 do |dashboard1|
     dashboard1.vm.hostname = "dashboard1.vag.ardemans.int"
     dashboard1.vm.network :private_network, ip: "192.168.5.16"
+	dashboard1.vm.provision "shell", inline: "cd /tmp; wget https://apt.puppetlabs.com/puppetlabs-release-precise.deb; dpkg -i puppetlabs-release-precise.deb; apt-get update"
+    dashboard1.vm.provision "shell", inline: "/usr/bin/apt-get -y install puppet"
 	dashboard1.vm.provision "shell", inline: "/vagrant/scripts/puppetize.sh"
 	dashboard1.vm.provision "puppet_server" do |puppet|
 	  puppet.puppet_server = "puppet1.vag.ardemans.int"
