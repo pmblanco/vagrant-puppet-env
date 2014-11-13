@@ -73,6 +73,10 @@ Pedro Miguel Blanco
    
 ## Changelog
 
+### v.0.6. 12/11/2014
+Hechas pruebas sobre S.O. Ubuntu Precise. Solventados algunos problemas y probado que todo funciona correctamente.
+Se ha tenido que forzar a que se actualice la versión de puppet antes de instalar las máquinas virtuales.
+
 ### v.0.5. 12/11/2014
 Introducimos el servicio mcollective, para lo cual hacemos uso del modulo de puppetlabs rabbitmq, para instalar el gestor de colas en el servidor de dashboard, y tambien del módulo de mcollective, también de puppetlabs, para instalar el agente en todos los servidores, y el cliente en el de puppetlabs
 
