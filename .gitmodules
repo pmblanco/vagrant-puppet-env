@@ -44,3 +44,6 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 	path = puppet/modules/remi
 	url = https://bitbucket.org/ardemans/puppet-modules-remi.git
 	branch = develop
+[submodule "puppet/modules/repoforge"]
+	path = puppet/modules/repoforge
+	url = https://github.com/Mylezeem/puppet-repoforge.git
