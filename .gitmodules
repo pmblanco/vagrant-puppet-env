@@ -34,3 +34,6 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 [submodule "puppet/modules/datacat"]
 	path = puppet/modules/datacat
 	url = https://github.com/richardc/puppet-datacat.git
+[submodule "puppet/modules/profiles"]
+	path = puppet/modules/profiles
+	url = https://bitbucket.org/ardemans/puppet-modules-profiles.git
