@@ -140,4 +140,15 @@ Vagrant.configure("2") do |config|
 	end
   end
 
+  # Maquina frontal para pruebas
+  config.vm.define :front1 do |front1|
+    front1.vm.hostname = "front1.vag.ardemans.int"
+    front1.vm.network :private_network, ip: "192.168.5.21"
+	front1.vm.provision "shell", inline: "/vagrant/scripts/puppetize.sh"
+	front1.vm.provision "puppet_server" do |puppet|
+	  puppet.puppet_server = "puppet1.vag.ardemans.int"
+	  puppet.options = "--verbose --debug --ssldir=/var/lib/puppet/ssl --waitforcert=5"
+	end
+  end
+
 end
