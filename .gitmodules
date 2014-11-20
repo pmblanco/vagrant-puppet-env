@@ -37,3 +37,6 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 [submodule "puppet/modules/profiles"]
 	path = puppet/modules/profiles
 	url = https://bitbucket.org/ardemans/puppet-modules-profiles.git
+[submodule "puppet/modules/php5"]
+	path = puppet/modules/php5
+	url = https://bitbucket.org/ardemans/puppet-modules-php5.git
