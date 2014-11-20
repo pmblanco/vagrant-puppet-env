@@ -40,3 +40,7 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 [submodule "puppet/modules/php5"]
 	path = puppet/modules/php5
 	url = https://bitbucket.org/ardemans/puppet-modules-php5.git
+[submodule "puppet/modules/remi"]
+	path = puppet/modules/remi
+	url = https://bitbucket.org/ardemans/puppet-modules-remi.git
+	branch = develop
