@@ -7,4 +7,7 @@ class roles::common::redhat {
     php55_enabled   => '1',
   }
   
+  class { 'repoforge':
+  }
+  
 }
