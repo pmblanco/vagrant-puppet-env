@@ -7,12 +7,14 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "Centos65_x64"
+  #config.vm.box = "Centos65_x64"
+  config.vm.box = "puppetlabs/centos-6.6-64-puppet"
 
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box"
+  #config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box"
+  #config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/centos-6.6-64-puppet"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -133,7 +135,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :dashboard1 do |dashboard1|
     dashboard1.vm.hostname = "dashboard1.vag.ardemans.int"
     dashboard1.vm.network :private_network, ip: "192.168.5.16"
-	dashboard1.vm.provision "shell", inline: "/vagrant/scripts/puppetize.sh"
+	dashboard1.vm.provision "shell", inline: "/bin/bash /vagrant/scripts/puppetize.sh"
 	dashboard1.vm.provision "puppet_server" do |puppet|
 	  puppet.puppet_server = "puppet1.vag.ardemans.int"
 	  puppet.options = "--verbose --debug --ssldir=/var/lib/puppet/ssl --waitforcert=5"
