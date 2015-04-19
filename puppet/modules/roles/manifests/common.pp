@@ -16,6 +16,12 @@ class roles::common (
 
   }
 
+  include firewall
+
+  resources { 'firewall':
+    purge => true,
+  }
+
   class { 'puppet::repo':
   }
   
