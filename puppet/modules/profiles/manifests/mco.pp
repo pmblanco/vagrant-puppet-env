@@ -1,7 +1,8 @@
 class profiles::mco (
   $hosts,
   $connector,
-  $client = false
+  $client = false,
+  $plugins = ['puppet','service','package','iptables','filemgr','nrpe','nettest'],
 ) {
   
   class {'mcollective':
@@ -10,7 +11,7 @@ class profiles::mco (
     client              => $client
   }
 
-  mcollective::plugin { 'puppet':
+  mcollective::plugin { $plugins:
     package    => true,
   }
 
