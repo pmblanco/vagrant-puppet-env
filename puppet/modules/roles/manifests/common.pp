@@ -26,9 +26,10 @@ class roles::common (
   }
   
   if $install_mcollective {
-    class { 'mcollective':
-      middleware_hosts      => [ '192.168.5.16' ],
-	  connector             => 'rabbitmq',
+    class { 'profiles::mco':
+      hosts      => [ '192.168.5.16' ],
+      connector  => 'rabbitmq',
+      client     => false,
     }
   }
   

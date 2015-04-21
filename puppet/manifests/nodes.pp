@@ -4,12 +4,6 @@ node 'puppet1.vag.ardemans.int' {
     install_mcollective   => false,
   }
 
-  class { 'mcollective':
-    middleware_hosts      => [ '192.168.5.16' ],
-    connector             => 'rabbitmq',
-	client                => true,
-  }
-  
   class { 'roles::puppet_master':
   }
   
