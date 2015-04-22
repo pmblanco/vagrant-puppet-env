@@ -26,5 +26,12 @@ node 'dashboard1.vag.ardemans.int' {
   class { 'roles::puppet_services':
   }
   
-  
+}
+
+
+node 'web1.vag.ardemans.int' {
+
+  class { 'roles::common':
+  }
+
 }
