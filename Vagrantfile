@@ -143,4 +143,15 @@ Vagrant.configure("2") do |config|
 	end
   end
 
+  # Maquina test frontal nodejs 
+  config.vm.define :web1 do |dashboard1|
+    dashboard1.vm.hostname = "web1.vag.ardemans.int"
+    dashboard1.vm.network :private_network, ip: "192.168.5.21"
+        dashboard1.vm.provision "shell", inline: "/bin/bash /vagrant/scripts/puppetize.sh"
+        dashboard1.vm.provision "puppet_server" do |puppet|
+          puppet.puppet_server = "puppet1.vag.ardemans.int"
+          puppet.options = "--verbose --debug --ssldir=/var/lib/puppet/ssl --waitforcert=5"
+        end
+  end
+
 end
