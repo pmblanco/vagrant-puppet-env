@@ -37,3 +37,6 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 [submodule "puppet/modules/nodejs"]
 	path = puppet/modules/nodejs
 	url = https://github.com/puppetlabs/puppetlabs-nodejs.git
+[submodule "puppet/modules/udeploy"]
+	path = puppet/modules/udeploy
+	url = https://gitlab.com/ECI-DevOps/THIRDPARTY-udeploy.git
