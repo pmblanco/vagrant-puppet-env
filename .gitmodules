@@ -40,3 +40,6 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 [submodule "puppet/modules/udeploy"]
 	path = puppet/modules/udeploy
 	url = https://gitlab.com/ECI-DevOps/THIRDPARTY-udeploy.git
+[submodule "puppet/modules/gpg_key"]
+	path = puppet/modules/gpg_key
+	url = https://github.com/treydock/puppet-gpg_key.git
