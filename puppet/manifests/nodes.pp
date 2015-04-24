@@ -31,10 +31,7 @@ node 'dashboard1.vag.ardemans.int' {
 
 node 'web1.vag.ardemans.int' {
 
-  class { 'roles::common':
-  }->
-
-  class { 'profiles::eci_nodejs':
+  class { 'roles::http::nodejs::test':
   }
 
 }
