@@ -25,12 +25,6 @@ class eciprofiles::puppet_master {
     ssldir               => '/var/lib/puppet/ssl',
   }
   
-  puppet::environment { 'dev':
-    manifestdir    => '/etc/puppet/environments/dev/manifests',
-    manifest       => 'site.pp',
-    modulepath     => '/etc/puppet/environments/dev/modules',
-  }
-  
   class { 'puppet::db':
     require   => Class['puppet::master'],
   }
