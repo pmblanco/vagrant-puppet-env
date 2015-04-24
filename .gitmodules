@@ -40,3 +40,9 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 [submodule "puppet/modules/gpg_key"]
 	path = puppet/modules/gpg_key
 	url = https://github.com/treydock/puppet-gpg_key.git
+[submodule "puppet/modules/nodejs"]
+	path = puppet/modules/nodejs
+	url = https://github.com/willdurand/puppet-nodejs.git
+[submodule "puppet/modules/wget"]
+	path = puppet/modules/wget
+	url = https://github.com/maestrodev/puppet-wget.git
