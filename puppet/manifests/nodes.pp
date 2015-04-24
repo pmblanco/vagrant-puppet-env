@@ -1,37 +1,21 @@
 node 'puppet1.vag.ardemans.int' {
 
-  class { 'roles::common':
-    install_mcollective   => false,
-  }
-
-  class { 'roles::puppet_master':
+  class { 'eciroles::confmanager::puppetmaster::test':
   }
   
 }
 
 node 'dashboard1.vag.ardemans.int' {
 
-
-  class { 'roles::common':
-  }->
-
-  class { 'puppet::agent':
-    report         => 'true',
-    masterserver   => 'puppet1.vag.ardemans.int',
-	service_status => 'stopped',
-	rundir         => '/var/run/puppet',
-	ssldir         => '/var/lib/puppet/ssl',
-  }->
-  
-  class { 'roles::puppet_services':
+  class { 'eciroles::confmanager::puppetservices::test':
   }
-  
+
 }
 
 
 node 'web1.vag.ardemans.int' {
 
-  class { 'roles::http::nodejs::test':
+  class { 'eciroles::http::nodejs::test':
   }
 
 }
