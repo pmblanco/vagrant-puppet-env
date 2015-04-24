@@ -1,48 +1,48 @@
 [submodule "puppet/environments/production/modules/apache"]
 	path = puppet/environments/production/modules/apache
 	url = https://github.com/puppetlabs/puppetlabs-apache.git
-[submodule "puppet/modules/puppet"]
-	path = puppet/modules/puppet
+[submodule "puppet/environments/production/modules/puppet"]
+	path = puppet/environments/production/modules/puppet
 	url = https://bitbucket.org/ardemans/puppet-modules-puppet.git
 [submodule "puppet/environments/production/modules/apt"]
 	path = puppet/environments/production/modules/apt
 	url = https://github.com/puppetlabs/puppetlabs-apt.git
-[submodule "puppet/modules/stdlib"]
-	path = puppet/modules/stdlib
+[submodule "puppet/environments/production/modules/stdlib"]
+	path = puppet/environments/production/modules/stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
-[submodule "puppet/modules/concat"]
-	path = puppet/modules/concat
+[submodule "puppet/environments/production/modules/concat"]
+	path = puppet/environments/production/modules/concat
 	url = https://github.com/puppetlabs/puppetlabs-concat
-[submodule "puppet/modules/puppetboard"]
-	path = puppet/modules/puppetboard
+[submodule "puppet/environments/production/modules/puppet"]
+	path = puppet/environments/production/modules/puppetboard
 url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
-[submodule "puppet/modules/epel"]
-	path = puppet/modules/epel
+[submodule "puppet/environments/production/modules/epel"]
+	path = puppet/environments/production/modules/epel
 	url = https://github.com/stahnma/puppet-module-epel.git
-[submodule "puppet/modules/firewall"]
-	path = puppet/modules/firewall
+[submodule "puppet/environments/production/modules/firewall"]
+	path = puppet/environments/production/modules/firewall
 	url = https://github.com/puppetlabs/puppetlabs-firewall.git
-[submodule "puppet/modules/rabbitmq"]
-	path = puppet/modules/rabbitmq
+[submodule "puppet/environments/production/modules/rabbitmq"]
+	path = puppet/environments/production/modules/rabbitmq
 	url = https://github.com/puppetlabs/puppetlabs-rabbitmq.git
-[submodule "puppet/modules/mcollective"]
-	path = puppet/modules/mcollective
+[submodule "puppet/environments/production/modules/mcollective"]
+	path = puppet/environments/production/modules/mcollective
 	url = https://github.com/pmblanco/puppet-mcollective.git
-[submodule "puppet/modules/staging"]
-	path = puppet/modules/staging
+[submodule "puppet/environments/production/modules/staging"]
+	path = puppet/environments/production/modules/staging
 	url = https://github.com/nanliu/puppet-staging.git
-[submodule "puppet/modules/datacat"]
-	path = puppet/modules/datacat
+[submodule "puppet/environments/production/modules/datacat"]
+	path = puppet/environments/production/modules/datacat
 	url = https://github.com/richardc/puppet-datacat.git
-[submodule "puppet/modules/udeploy"]
-	path = puppet/modules/udeploy
+[submodule "puppet/environments/production/modules/udeploy"]
+	path = puppet/environments/production/modules/udeploy
 	url = https://gitlab.com/ECI-DevOps/THIRDPARTY-udeploy.git
-[submodule "puppet/modules/gpg_key"]
-	path = puppet/modules/gpg_key
+[submodule "puppet/environments/production/modules/gpg_key"]
+	path = puppet/environments/production/modules/gpg_key
 	url = https://github.com/treydock/puppet-gpg_key.git
-[submodule "puppet/modules/nodejs"]
-	path = puppet/modules/nodejs
+[submodule "puppet/environments/production/modules/nodejs"]
+	path = puppet/environments/production/modules/nodejs
 	url = https://github.com/willdurand/puppet-nodejs.git
-[submodule "puppet/modules/wget"]
-	path = puppet/modules/wget
+[submodule "puppet/environments/production/modules/wget"]
+	path = puppet/environments/production/modules/wget
 	url = https://github.com/maestrodev/puppet-wget.git
