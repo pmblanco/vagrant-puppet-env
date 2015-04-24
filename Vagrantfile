@@ -125,7 +125,7 @@ Vagrant.configure("2") do |config|
 	puppet1.vm.provision "shell", inline: "/usr/bin/yum -y install puppet"
 	puppet1.vm.provision :puppet do |puppet|
 	  puppet.manifests_path = "puppet/manifests"
-	  puppet.manifest_file = "site.pp"
+	  puppet.manifest_file = "nodes.pp"
 	  puppet.module_path = "puppet/modules"
 	  puppet.hiera_config_path = "hiera.yaml"
 	  puppet.options = "--verbose --debug"
