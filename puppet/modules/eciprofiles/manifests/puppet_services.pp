@@ -1,4 +1,4 @@
-class roles::puppet_services {
+class eciprofiles::puppet_services {
 
  
   class { 'apache':

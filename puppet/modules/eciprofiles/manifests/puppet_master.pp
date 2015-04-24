@@ -1,15 +1,16 @@
-class roles::puppet_master {
+class eciprofiles::puppet_master {
 
-  class { 'profiles::mco':
+  class { 'eciprofiles::mcollective':
     hosts     => ['192.168.5.16'],
     connector => 'rabbitmq', 
     client    => true,
   }
 
   class { 'puppet::master':
-    manifestdir          => '/vagrant/puppet/manifests',
-    manifest             => '/vagrant/puppet/manifests/site.pp',
-    modulepath           => '/vagrant/puppet/modules',
+#    manifestdir          => '/vagrant/puppet/manifests',
+#    manifest             => '/vagrant/puppet/manifests/site.pp',
+#    modulepath           => '/vagrant/puppet/modules',
+    environmentpath      => '/vagrant/puppet/environments',
     dns_alt_names        => 'puppet.vag.ardemans.int',
     puppetdb_server      => 'puppet1.vag.ardemans.int',
     reports              => 'store,puppetdb',

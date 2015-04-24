@@ -1,11 +1,11 @@
-class profiles::mco (
+class eciprofiles::mcollective (
   $hosts,
   $connector,
   $client = false,
   $plugins = ['puppet','service','package','iptables','filemgr','nrpe','nettest'],
 ) {
   
-  class {'mcollective':
+  class { '::mcollective':
     middleware_hosts    => $hosts,
     connector           => $connector,
     client              => $client

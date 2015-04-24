@@ -1,16 +1,16 @@
-class profiles::eci_common (
+class eciprofiles::common (
   $install_mcollective = true,
   $install_puppet_agent = true
 ) {
 
   case $::operatingsystem {
     'Ubuntu': {
-      class { 'profiles::eci_common::ubuntu':
+      class { 'eciprofiles::common::ubuntu':
       }
     }
 
     'CentosOS','RedHat': {
-      class { 'profiles::eci_common::redhat':
+      class { 'eciprofiles::common::redhat':
       }
     }
 
@@ -26,7 +26,7 @@ class profiles::eci_common (
   }
 
   if $install_mcollective {
-    class { 'profiles::mco':
+    class { 'eciprofiles::mcollective':
       hosts      => [ '192.168.5.16' ],
       connector  => 'rabbitmq',
       client     => false,

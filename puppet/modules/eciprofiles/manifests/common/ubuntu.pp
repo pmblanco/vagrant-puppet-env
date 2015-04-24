@@ -1,4 +1,4 @@
-class profiles::eci_common::ubuntu {
+class eciprofiles::common::ubuntu {
   
   class { 'apt':
     disable_keys  => true,
