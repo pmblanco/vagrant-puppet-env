@@ -1,5 +1,5 @@
-[submodule "puppet/modules/apache"]
-	path = puppet/modules/apache
+[submodule "puppet/environments/production/modules/apache"]
+	path = puppet/environments/production/modules/apache
 	url = https://github.com/puppetlabs/puppetlabs-apache.git
 [submodule "puppet/modules/puppet"]
 	path = puppet/modules/puppet
