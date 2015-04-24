@@ -4,8 +4,8 @@
 [submodule "puppet/modules/puppet"]
 	path = puppet/modules/puppet
 	url = https://bitbucket.org/ardemans/puppet-modules-puppet.git
-[submodule "puppet/modules/apt"]
-	path = puppet/modules/apt
+[submodule "puppet/environments/production/modules/apt"]
+	path = puppet/environments/production/modules/apt
 	url = https://github.com/puppetlabs/puppetlabs-apt.git
 [submodule "puppet/modules/stdlib"]
 	path = puppet/modules/stdlib
