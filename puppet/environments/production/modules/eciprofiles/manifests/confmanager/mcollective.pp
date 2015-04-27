@@ -1,4 +1,4 @@
-class eciprofiles::mcollective (
+class eciprofiles::confmanager::mcollective (
   $hosts,
   $connector,
   $client = false,

@@ -1,6 +1,6 @@
-class eciprofiles::puppet_master {
+class eciprofiles::confmanager::puppet_master {
 
-  class { 'eciprofiles::mcollective':
+  class { 'eciprofiles::confmanager::mcollective':
     hosts     => ['192.168.5.16'],
     connector => 'rabbitmq', 
     client    => true,

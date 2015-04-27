@@ -1,4 +1,4 @@
-class eciprofiles::puppet_services {
+class eciprofiles::confmanager::puppet_services {
 
  
   class { 'apache':

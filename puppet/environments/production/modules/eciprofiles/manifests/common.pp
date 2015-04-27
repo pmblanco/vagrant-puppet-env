@@ -26,7 +26,7 @@ class eciprofiles::common (
   }
 
   if $install_mcollective {
-    class { 'eciprofiles::mcollective':
+    class { 'eciprofiles::confmanager::mcollective':
       hosts      => [ '192.168.5.16' ],
       connector  => 'rabbitmq',
       client     => false,

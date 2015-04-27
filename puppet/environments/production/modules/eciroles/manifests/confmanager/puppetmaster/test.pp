@@ -5,7 +5,7 @@ class eciroles::confmanager::puppetmaster::test {
     install_mcollective    => false,
   } ->
 
-  class { 'eciprofiles::puppet_master':
+  class { 'eciprofiles::confmanager::puppet_master':
   }
 
 }
