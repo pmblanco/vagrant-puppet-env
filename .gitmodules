@@ -42,7 +42,7 @@ url=https://bitbucket.org/ardemans/puppet-modules-puppetboard.git
 	url = https://github.com/treydock/puppet-gpg_key.git
 [submodule "puppet/environments/production/modules/nodejs"]
 	path = puppet/environments/production/modules/nodejs
-	url = https://github.com/willdurand/puppet-nodejs.git
+	url = https://gitlab.com/ECI-DevOps/THIRDPARTY_willdurand_nodejs.git
 [submodule "puppet/environments/production/modules/wget"]
 	path = puppet/environments/production/modules/wget
 	url = https://github.com/maestrodev/puppet-wget.git
